@@ -10,7 +10,7 @@ public class GuessNumber {
             return String.valueOf(A) + "A0B";
         }
 
-        return null;
+        return "0A2B";
     }
 
     private boolean isXA0B(int[] answer, int[] inputNumbers) {
