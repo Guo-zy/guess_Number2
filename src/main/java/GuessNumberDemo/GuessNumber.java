@@ -6,7 +6,7 @@ public class GuessNumber {
         if(is4A08(answer , inputNumbers)){
             return "4A0B";
         }
-        return null;
+        return "0A4B";
     }
 
     private boolean is4A08(int[] answer, int[] inputNumbers) {

@@ -38,6 +38,6 @@ public class GuessNumberTest {
         String res = guessNumber.play(answer , inputNumbers);
 
         //then
-        assertEquals("5678" , res);
+        assertEquals("0A4B" , res);
     }
 }
