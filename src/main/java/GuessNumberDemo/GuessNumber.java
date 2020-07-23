@@ -9,8 +9,19 @@ public class GuessNumber {
             int A = findA(answer , inputNumbers);
             return String.valueOf(A) + "A0B";
         }
+        if(is0AXB(answer,inputNumbers)){
+            int B = findB(answer, inputNumbers);
+            return "0A" + String.valueOf(B) + "B";
+        }
+        return null;
+    }
 
-        return "0A2B";
+    private boolean is0AXB(int[] answer, int[] inputNumbers) {
+        int A = findA(answer, inputNumbers);
+        int B = findB(answer, inputNumbers);
+        if(A == 0 && B != 0)
+            return true;
+        return false;
     }
 
     private boolean isXA0B(int[] answer, int[] inputNumbers) {
