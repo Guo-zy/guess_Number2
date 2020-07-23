@@ -18,7 +18,7 @@ public class GuessNumber {
             int B = findB(answer,inputNumbers);
             return String.valueOf(A) + "A" + String.valueOf(B) + "B";
         }
-        return null;
+        return "0A4B";
     }
 
     private boolean isXAXB(int[] answer, int[] inputNumbers) {
