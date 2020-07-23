@@ -26,6 +26,8 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     mavenLocal()
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    mavenCentral()
     jcenter()
 }
 
@@ -37,6 +39,8 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
     // Use JUnit test framework
     testCompile 'org.mockito:mockito-core:3.4.0'
+//    testCompile 'org.mockito:mockito-all:3.4.0'
+//    testCompile group: 'org.mockito', name: 'mockito-core', version: '3.4.4'
 }
 
 test {
