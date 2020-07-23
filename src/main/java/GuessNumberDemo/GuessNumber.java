@@ -46,10 +46,11 @@ public class GuessNumber {
 
 
     private boolean is0A0B(int[] answer, int[] inputNumbers) {
-        for (int i = 0; i < answer.length; i++) {
-            if (answer[i] == inputNumbers[i]) return false;
-        }
-        return true;
+        int A = findA(answer,inputNumbers);
+        int B = findB(answer, inputNumbers);
+        if(A == B && A == 0)
+            return true;
+        return false;
     }
 
     private boolean is4A0B(int[] answer, int[] inputNumbers) {
