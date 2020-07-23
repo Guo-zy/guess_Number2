@@ -28,7 +28,7 @@ public class GuessNumberTest {
     }
 
     @Test
-    void should_return_0A4B_when_play_given_input_1234_and_answer_5678() {
+    void should_return_0A0B_when_play_given_input_1234_and_answer_5678() {
         //given
         GuessNumber guessNumber = new GuessNumber();
         int [] inputNumbers = {1,2,3,4};
@@ -38,6 +38,6 @@ public class GuessNumberTest {
         String res = guessNumber.play(answer , inputNumbers);
 
         //then
-        assertEquals("0A4B" , res);
+        assertEquals("0A0B" , res);
     }
 }
