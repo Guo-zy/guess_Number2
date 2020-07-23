@@ -13,7 +13,20 @@ public class GuessNumber {
             int B = findB(answer, inputNumbers);
             return "0A" + String.valueOf(B) + "B";
         }
-        return "1A1B";
+        if(isXAXB(answer,inputNumbers)){
+            int A = findA(answer, inputNumbers);
+            int B = findB(answer,inputNumbers);
+            return String.valueOf(A) + "A" + String.valueOf(B) + "B";
+        }
+        return null;
+    }
+
+    private boolean isXAXB(int[] answer, int[] inputNumbers) {
+        int A = findA(answer, inputNumbers);
+        int B = findB(answer, inputNumbers);
+        if(A != 0 && B != 0)
+            return true;
+        return false;
     }
 
     private boolean is0AXB(int[] answer, int[] inputNumbers) {
