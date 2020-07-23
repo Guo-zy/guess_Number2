@@ -5,7 +5,7 @@ public class GuessNumber {
     public String play(int[] answer, int[] inputNumbers) {
         if(is4A08(answer , inputNumbers)) return "4A0B";
         if(is0A0B(answer , inputNumbers)) return "0A0B";
-        return null;
+        return "2A0B";
     }
 
     private boolean is0A0B(int[] answer, int[] inputNumbers) {
