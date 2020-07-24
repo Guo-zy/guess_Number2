@@ -8,7 +8,7 @@ public class GuessNumber {
         answer = answerGenerate.generate();
     }
 
-    public String play(int[] inputNumbers) {
+    public String getResult(int[] inputNumbers) {
 
             String A = String.valueOf(findA(answer, inputNumbers));
             String B = String.valueOf(findB(answer, inputNumbers));

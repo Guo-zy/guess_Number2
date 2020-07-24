@@ -27,7 +27,7 @@ public class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
-        String res = guessNumber.play(inputNumbers);
+        String res = guessNumber.getResult(inputNumbers);
 
         //then
         assertEquals("4A0B", res);
@@ -40,7 +40,7 @@ public class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
-        String res = guessNumber.play(inputNumbers);
+        String res = guessNumber.getResult(inputNumbers);
 
         //then
         assertEquals("0A0B", res);
@@ -53,7 +53,7 @@ public class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
-        String res = guessNumber.play(inputNumbers);
+        String res = guessNumber.getResult(inputNumbers);
 
         //then
         assertEquals("2A0B", res);
@@ -67,7 +67,7 @@ public class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
-        String res = guessNumber.play(inputNumbers);
+        String res = guessNumber.getResult(inputNumbers);
 
         //then
         assertEquals("0A2B", res);
@@ -81,7 +81,7 @@ public class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
-        String res = guessNumber.play(inputNumbers);
+        String res = guessNumber.getResult(inputNumbers);
 
         //then
         assertEquals("1A1B", res);
@@ -95,7 +95,7 @@ public class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
-        String res = guessNumber.play(inputNumbers);
+        String res = guessNumber.getResult(inputNumbers);
 
         //then
         assertEquals("0A4B", res);
