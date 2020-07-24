@@ -1,6 +1,6 @@
 package GuessNumberDemo;
 
-public class IsInputNumberValid {
+public class InputNumberValid {
 
     public String checkInputNumbers(int[] inputNumbers) {
         String input_is_null = checkInputNull(inputNumbers);

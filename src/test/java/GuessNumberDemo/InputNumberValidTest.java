@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class IsInputNumberValidTest {
+class InputNumberValidTest {
 
     @Test
     void should_return_input_is_null_when_checkInputNull_given_null() {
         //given
-        IsInputNumberValid isInputNumberValid = new IsInputNumberValid();
+        InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {};
 
         //when
@@ -23,7 +23,7 @@ class IsInputNumberValidTest {
     @Test
     void should_return_inputNumbersLength_is_invalid_when_checkInputLength_given_invalidNumbers() {
         //given
-        IsInputNumberValid isInputNumberValid = new IsInputNumberValid();
+        InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {1,2,3};
 
         //when
@@ -36,7 +36,7 @@ class IsInputNumberValidTest {
     @Test
     void should_return_input_is_valid_when_checkInputNumbers_validNumbers() {
         //given
-        IsInputNumberValid isInputNumberValid = new IsInputNumberValid();
+        InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {1,2,3,4};
 
         //when
