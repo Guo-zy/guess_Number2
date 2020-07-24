@@ -12,4 +12,9 @@ public class IsInputNumberValid {
         if(inputNumbers.length != 4) return "inputNumbersLength is invalid";
         return null;
     }
+
+
+    public String checkInputNumbers(int[] inputNumbers) {
+        return null;
+    }
 }
