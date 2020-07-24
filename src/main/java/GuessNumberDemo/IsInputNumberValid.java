@@ -7,4 +7,8 @@ public class IsInputNumberValid {
         if(inputNumbers == null || inputNumbers.length == 0)  return "input is null";
         return "input is valid";
     }
+
+    public String checkInputLength(int[] inputNumbers) {
+        return null;
+    }
 }

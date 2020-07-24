@@ -19,4 +19,17 @@ class IsInputNumberValidTest {
         assertEquals("input is null" , res);
 
     }
+
+    @Test
+    void should_return_inputNumbersLength_is_invalid_when_checkInputLength_given_invalidNumbers() {
+        //given
+        IsInputNumberValid isInputNumberValid = new IsInputNumberValid();
+        int []inputNumbers = {1,2,3};
+
+        //when
+        String res = isInputNumberValid.checkInputLength(inputNumbers);
+
+        //given
+        assertEquals("inputNumbersLength is invalid" , res);
+    }
 }
