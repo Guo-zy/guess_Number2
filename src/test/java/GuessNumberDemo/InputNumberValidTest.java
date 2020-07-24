@@ -1,6 +1,8 @@
 package GuessNumberDemo;
 
+
 import org.junit.jupiter.api.Test;
+import org.mockito.InOrder;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,5 +46,18 @@ class InputNumberValidTest {
 
         //given
         assertEquals("input is valid" , res);
+    }
+
+    @Test
+    void should_return_input_is_repeat_when_checkNumbersRepeat_given_repeatNumbers() {
+        //given
+        InputNumberValid inputNumberValid = new InputNumberValid();
+        int []inputNumbers = {1,2,2,3};
+
+        //when
+        String res = inputNumberValid.checkInputNumbers(inputNumbers);
+
+        //then
+        assertEquals("input is repeat" , res);
     }
 }
