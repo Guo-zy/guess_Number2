@@ -1,5 +1,7 @@
 package GuessNumberDemo;
 
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -7,18 +9,25 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 
-
 public class GuessNumberTest {
 
+    private AnswerGenerate answerGenerate;
+
+    @BeforeEach
+    void genrateAnswer() {
+        int[] answer = {1, 2, 3, 4};
+        answerGenerate = Mockito.mock(AnswerGenerate.class);
+        when(answerGenerate.generate()).thenReturn(answer);
+    }
 
     @Test
     void should_return_4A0B_when_play_given_input_1234_and_answer_1234() {
         //given
         int[] inputNumbers = {1, 2, 3, 4};
-        int[] answer = {1, 2, 3, 4};
+//        int[] answer = {1, 2, 3, 4};
 
-        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
-        when(answerGenerate.generate()).thenReturn(answer);
+//        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
+//        when(answerGenerate.generate()).thenReturn(answer);
 
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
@@ -32,11 +41,11 @@ public class GuessNumberTest {
     @Test
     void should_return_0A0B_when_play_given_input_1234_and_answer_5678() {
         //given
-        int[] inputNumbers = {1, 2, 3, 4};
-        int[] answer = {5, 6, 7, 8};
+        int[] inputNumbers = {5, 6, 7, 8};
+//        int[] answer = {5, 6, 7, 8};
 
-        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
-        when(answerGenerate.generate()).thenReturn(answer);
+//        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
+//        when(answerGenerate.generate()).thenReturn(answer);
 
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
@@ -51,10 +60,10 @@ public class GuessNumberTest {
     void should_return_2A0B_when_play_given_input_1234_and_answer_1256() {
         //given
 
-        int[] inputNumbers = {1, 2, 3, 4};
-        int[] answer = {1, 2, 5, 6};
-        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
-        when(answerGenerate.generate()).thenReturn(answer);
+        int[] inputNumbers = {1, 2, 5, 6};
+//        int[] answer = {1, 2, 3, 4};
+//        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
+//        when(answerGenerate.generate()).thenReturn(answer);
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
@@ -67,10 +76,10 @@ public class GuessNumberTest {
     @Test
     void should_return_0A2B_when_play_given_input_1234_and_answer_3456() {
         //given
-        int[] inputNumbers = {1, 2, 3, 4};
-        int[] answer = {3, 4, 5, 6};
-        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
-        when(answerGenerate.generate()).thenReturn(answer);
+        int[] inputNumbers = {3, 4, 5, 6};
+        int[] answer = {1, 2, 3, 4};
+//        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
+//        when(answerGenerate.generate()).thenReturn(answer);
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
@@ -84,10 +93,10 @@ public class GuessNumberTest {
     void should_return_1A1B_when_play_given_input_1234_and_answer_1562() {
         //given
 
-        int[] inputNumbers = {1, 2, 3, 4};
-        int[] answer = {1, 5, 6, 2};
-        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
-        when(answerGenerate.generate()).thenReturn(answer);
+        int[] inputNumbers = {1, 5, 6, 2};
+//        int[] answer = {1, 2, 3, 4};
+//        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
+//        when(answerGenerate.generate()).thenReturn(answer);
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
@@ -101,10 +110,10 @@ public class GuessNumberTest {
     void should_return_0A4B_when_play_given_input_1234_and_answer_4321() {
         //given
 
-        int[] inputNumbers = {1, 2, 3, 4};
-        int[] answer = {4, 3, 2, 1};
-        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
-        when(answerGenerate.generate()).thenReturn(answer);
+        int[] inputNumbers = {4, 3, 2, 1};
+//        int[] answer = {1, 2, 3, 4};
+//        AnswerGenerate answerGenerate = Mockito.mock(AnswerGenerate.class);
+//        when(answerGenerate.generate()).thenReturn(answer);
         GuessNumber guessNumber = new GuessNumber(answerGenerate);
 
         //when
@@ -116,7 +125,7 @@ public class GuessNumberTest {
 
     class AnswerGenerate_1234 implements AnswerGenerate {
 
-        private int[] answer ;
+        private int[] answer;
 
         @Override
         public int[] generate() {
