@@ -13,7 +13,7 @@ class IsInputNumberValidTest {
         int []inputNumbers = {};
 
         //when
-        String res = isInputNumberValid.checkInputNull(inputNumbers);
+        String res = isInputNumberValid.checkInputNumbers(inputNumbers);
 
         //then
         assertEquals("input is null" , res);
@@ -27,7 +27,7 @@ class IsInputNumberValidTest {
         int []inputNumbers = {1,2,3};
 
         //when
-        String res = isInputNumberValid.checkInputLength(inputNumbers);
+        String res = isInputNumberValid.checkInputNumbers(inputNumbers);
 
         //given
         assertEquals("inputNumbersLength is invalid" , res);
