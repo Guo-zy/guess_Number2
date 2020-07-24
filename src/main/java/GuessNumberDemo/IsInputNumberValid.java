@@ -2,6 +2,10 @@ package GuessNumberDemo;
 
 public class IsInputNumberValid {
 
+    public String checkInputNumbers(int[] inputNumbers) {
+        return "input is valid";
+    }
+
     public String checkInputNull(int[] inputNumbers) {
 
         if(inputNumbers == null || inputNumbers.length == 0)  return "input is null";
@@ -14,7 +18,5 @@ public class IsInputNumberValid {
     }
 
 
-    public String checkInputNumbers(int[] inputNumbers) {
-        return null;
-    }
+
 }
