@@ -2,7 +2,13 @@ package GuessNumberDemo;
 
 public class GuessNumber {
 
-    public String play(int[] answer, int[] inputNumbers) {
+    private int []answer;
+
+    public  GuessNumber(AnswerGenerate answerGenerate){
+        answer = answerGenerate.generate();
+    }
+
+    public String play(int[] inputNumbers) {
 //        if (is4A0B(answer, inputNumbers)) return "4A0B";
 //        if (is0A0B(answer, inputNumbers)) return "0A0B";
 //        if (isXA0B(answer, inputNumbers)) {
