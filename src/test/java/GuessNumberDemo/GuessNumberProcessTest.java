@@ -12,7 +12,7 @@ class GuessNumberProcessTest {
         int tryTime = 7;
 
         //when
-        String res = guessNumberProcess.isTryOver6Time(tryTime);
+        String res = guessNumberProcess.getGameResult(tryTime);
 
         //then
         assertEquals("tryTime over 6 time , game over" , res );
