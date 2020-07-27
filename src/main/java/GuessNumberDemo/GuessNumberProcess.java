@@ -17,6 +17,7 @@ public class GuessNumberProcess {
                 setResultMessage("win");
                 return true;
             }
+            setResultMessage("wrongAnswer");
             return false;
     }
 

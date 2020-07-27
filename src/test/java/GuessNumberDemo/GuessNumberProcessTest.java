@@ -15,6 +15,18 @@ class GuessNumberProcessTest {
 
         //then
         assertEquals("win" , guessNumberProcess.getResultMessage());
+    }
+
+    @Test
+    void should_return_wrongAnswer_when_getGameResult_given_WrongNumber() {
+        //given
+        GuessNumberProcess guessNumberProcess = new GuessNumberProcess();
+
+        //when
+        guessNumberProcess.getGameResult("1A0B");
+
+        //then
+        assertEquals("wrongAnswer" , guessNumberProcess.getResultMessage());
 
 
     }
