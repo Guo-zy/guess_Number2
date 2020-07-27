@@ -8,7 +8,9 @@ public class AnswerGenerateImpl implements AnswerGenerate {
     @Override
     public int[] generate() {
         int[] answer = getRandom4Numbers();
-        return new int[0];
+        if(isAnswerLengthInvalid(answer)) return null;
+        if(isAnswerRepeat(answer)) return null;
+        return answer;
     }
 
 
