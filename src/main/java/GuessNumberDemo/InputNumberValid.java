@@ -5,9 +5,10 @@ import java.util.HashSet;
 public class InputNumberValid {
 
     public String checkInputNumbers(int[] inputNumbers) {
-        String input_is_null = checkInputNull(inputNumbers);
-        if("input is null".equals(input_is_null)) return input_is_null;
-
+        if(checkInputNull(inputNumbers)) {
+            String wrongMes = "input_is_null";
+            return wrongMes;
+        }
         String inputNumbersLength_is_invalid = checkInputLength(inputNumbers);
         if("inputNumbersLength is invalid".equals(inputNumbersLength_is_invalid)) return inputNumbersLength_is_invalid;
 
@@ -17,10 +18,10 @@ public class InputNumberValid {
         return "input is valid";
     }
 
-    private String checkInputNull(int[] inputNumbers) {
+    protected boolean checkInputNull(int[] inputNumbers) {
 
-        if(inputNumbers == null || inputNumbers.length == 0)  return "input is null";
-        return null;
+        if(inputNumbers == null || inputNumbers.length == 0)  return true;
+        return false;
     }
 
     private String checkInputLength(int[] inputNumbers) {

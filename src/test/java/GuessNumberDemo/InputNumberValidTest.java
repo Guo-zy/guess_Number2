@@ -9,18 +9,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class InputNumberValidTest {
 
     @Test
-    void should_return_input_is_null_when_checkInputNull_given_null() {
+    void should_return_true_when_checkInputNull_given_null_number() {
         //given
         InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {};
 
         //when
-        String res = isInputNumberValid.checkInputNumbers(inputNumbers);
+        boolean input_is_null = isInputNumberValid.checkInputNull(inputNumbers);
 
         //then
-        assertEquals("input is null" , res);
+        assertEquals(true , input_is_null);
 
     }
+
 
     @Test
     void should_return_inputNumbersLength_is_invalid_when_checkInputLength_given_invalidNumbers() {
