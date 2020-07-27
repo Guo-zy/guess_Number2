@@ -24,16 +24,16 @@ class InputNumberValidTest {
 
 
     @Test
-    void should_return_inputNumbersLength_is_invalid_when_checkInputLength_given_invalidNumbers() {
+    void should_return_true_when_checkInputLength_given_invalidLengthNumbers() {
         //given
         InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {1,2,3};
 
         //when
-        String res = isInputNumberValid.checkInputNumbers(inputNumbers);
+        boolean res = isInputNumberValid.isInputLengthInvalid(inputNumbers);
 
         //given
-        assertEquals("inputNumbersLength is invalid" , res);
+        assertEquals(true , res);
     }
 
     @Test
@@ -43,7 +43,7 @@ class InputNumberValidTest {
         int []inputNumbers = {1,2,3,4};
 
         //when
-        String  res = isInputNumberValid.checkInputNumbers(inputNumbers);
+        boolean  res = isInputNumberValid.isInputNumbersValid(inputNumbers);
 
         //given
         assertEquals("input is valid" , res);
@@ -56,7 +56,7 @@ class InputNumberValidTest {
         int []inputNumbers = {1,2,2,3};
 
         //when
-        String res = inputNumberValid.checkInputNumbers(inputNumbers);
+        boolean res = inputNumberValid.isInputNumbersValid(inputNumbers);
 
         //then
         assertEquals("input is repeat" , res);
