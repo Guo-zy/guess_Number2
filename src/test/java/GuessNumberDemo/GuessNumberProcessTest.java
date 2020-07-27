@@ -17,4 +17,9 @@ class GuessNumberProcessTest {
         //then
         assertEquals("tryTime over 6 time , game over" , res );
     }
+
+    @Test
+    void should_return_wrong_question_when_checkGuessNumber_then_given_wrong_GuessNumber() {
+        //given
+    }
 }

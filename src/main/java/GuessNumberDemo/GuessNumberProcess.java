@@ -11,6 +11,7 @@ public class GuessNumberProcess {
     public String getGameResult(int tryTime){
         String tryOver6Time = isTryOver6Time(tryTime);
         if("tryTime over 6 time , game over".equals(tryOver6Time)) return tryOver6Time;
+
         return null;
     }
 }
