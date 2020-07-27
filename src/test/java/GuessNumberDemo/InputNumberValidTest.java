@@ -69,10 +69,24 @@ class InputNumberValidTest {
         int []inputNumbers = {};
 
         //when
-        boolean res = inputNumberValid.isInputNumbersValid(inputNumbers);
+         inputNumberValid.isInputNumbersValid(inputNumbers);
 
         //given
         assertEquals("input is null" , inputNumberValid.getWrongMes());
+
+    }
+
+    @Test
+    void should_return_inputNumberLength_is_invalid_when_isInputNumbersValid_given_invalidLengthNumber(){
+        //given
+        InputNumberValid inputNumberValid = new InputNumberValid();
+        int []inputNumbers = {1,2,3};
+
+        //when
+        inputNumberValid.isInputNumbersValid(inputNumbers);
+
+        //given
+        assertEquals("inputNumberLength is invalid" , inputNumberValid.getWrongMes());
 
     }
 }
