@@ -1,5 +1,6 @@
 package GuessNumberDemo;
 
+import java.util.HashSet;
 import java.util.Random;
 
 public class AnswerGenerateImpl implements AnswerGenerate {
@@ -8,6 +9,17 @@ public class AnswerGenerateImpl implements AnswerGenerate {
     public int[] generate() {
         int[] answer = getRandom4Numbers();
         return new int[0];
+    }
+
+
+    protected boolean isAnswerRepeat(int[] answer) {
+        int inputSize = answer.length;
+        HashSet<Integer> Hset = new HashSet<Integer>();
+        for (int num : answer) {
+            Hset.add(num);
+        }
+        if (inputSize != Hset.size()) return true;
+        return false;
     }
 
     private int[] getRandom4Numbers() {
