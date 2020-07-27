@@ -12,16 +12,6 @@ public class AnswerGenerateImpl implements AnswerGenerate {
     }
 
 
-    protected boolean isAnswerRepeat(int[] answer) {
-        int inputSize = answer.length;
-        HashSet<Integer> Hset = new HashSet<Integer>();
-        for (int num : answer) {
-            Hset.add(num);
-        }
-        if (inputSize != Hset.size()) return true;
-        return false;
-    }
-
     private int[] getRandom4Numbers() {
         int[] ansnwer = new int[4];
         boolean[] isUse = new boolean[4];
@@ -35,5 +25,20 @@ public class AnswerGenerateImpl implements AnswerGenerate {
             isUse[randomNum] = true;
         }
         return ansnwer;
+    }
+
+    protected boolean isAnswerRepeat(int[] answer) {
+        int inputSize = answer.length;
+        HashSet<Integer> Hset = new HashSet<Integer>();
+        for (int num : answer) {
+            Hset.add(num);
+        }
+        if (inputSize != Hset.size()) return true;
+        return false;
+    }
+
+    protected boolean isAnswerLengthInvalid(int[] answer) {
+        if(answer.length != 4) return true;
+             return false;
     }
 }

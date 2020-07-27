@@ -19,6 +19,20 @@ class AnswerGenerateImplTest {
         assertEquals(true , isRepeat);
 
     }
+    @Test
+    void should_return_true_when_AnswerLengthIsValid_given_InvalidLengthAnswer() {
+        //given
+        AnswerGenerateImpl answerGenerate = new AnswerGenerateImpl();
+        int []answer = {1,2,2};
+
+        //when
+        boolean isRepeat = answerGenerate.isAnswerLengthInvalid(answer);
+
+        //then
+        assertEquals(true , isRepeat);
+
+    }
+
 
 
 }
