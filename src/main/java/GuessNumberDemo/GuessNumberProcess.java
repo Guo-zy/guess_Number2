@@ -4,15 +4,11 @@ public class GuessNumberProcess {
 
     private String resultMessage;
 
-    public String getResultMessage() {
-        return resultMessage;
-    }
-
-    public void setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-    }
-
-    public boolean getGameResult(String guessNumber) {
+    public boolean getGameResult(String guessNumber , int answerTime) {
+        if(answerTime >= 6){
+            setResultMessage("no chance answer");
+            return false;
+        }
         if(isResultCorrect(guessNumber)){
             return true;
         }
@@ -28,5 +24,12 @@ public class GuessNumberProcess {
         return false;
     }
 
+    public String getResultMessage() {
+        return resultMessage;
+    }
+
+    public void setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+    }
 
 }
