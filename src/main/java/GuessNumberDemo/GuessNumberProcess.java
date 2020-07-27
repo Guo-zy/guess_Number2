@@ -13,12 +13,20 @@ public class GuessNumberProcess {
     }
 
     public boolean getGameResult(String guessNumber) {
-            if(guessNumber.equals("4A0B")){
-                setResultMessage("win");
-                return true;
-            }
-            setResultMessage("wrongAnswer");
-            return false;
+        if(isResultCorrect(guessNumber)){
+            return true;
+        }
+        return false;
     }
+
+    private boolean isResultCorrect(String guessNumber) {
+        if(guessNumber.equals("4A0B")){
+            setResultMessage("win");
+            return true;
+        }
+        setResultMessage("wrongAnswer");
+        return false;
+    }
+
 
 }
