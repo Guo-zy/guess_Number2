@@ -5,11 +5,18 @@ public class GuessNumberProcess {
     private String resultMessage;
 
     public boolean getGameResult(String guessNumber , int answerTime) {
-        if(answerTime >= 6){
-            setResultMessage("no chance answer");
+        if (isAnswerMoreThan6Times(answerTime)){
             return false;
         }
         if(isResultCorrect(guessNumber)){
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isAnswerMoreThan6Times(int answerTime) {
+        if (answerTime >= 6) {
+            setResultMessage("no chance answer");
             return true;
         }
         return false;
