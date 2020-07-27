@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class InputNumberValid {
 
     public String checkInputNumbers(int[] inputNumbers) {
-        if(checkInputNull(inputNumbers)) {
+        if(isInputNull(inputNumbers)) {
             String wrongMes = "input_is_null";
             return wrongMes;
         }
@@ -18,7 +18,7 @@ public class InputNumberValid {
         return "input is valid";
     }
 
-    protected boolean checkInputNull(int[] inputNumbers) {
+    protected boolean isInputNull(int[] inputNumbers) {
 
         if(inputNumbers == null || inputNumbers.length == 0)  return true;
         return false;

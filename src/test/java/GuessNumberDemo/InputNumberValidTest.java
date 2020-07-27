@@ -15,7 +15,7 @@ class InputNumberValidTest {
         int []inputNumbers = {};
 
         //when
-        boolean input_is_null = isInputNumberValid.checkInputNull(inputNumbers);
+        boolean input_is_null = isInputNumberValid.isInputNull(inputNumbers);
 
         //then
         assertEquals(true , input_is_null);
