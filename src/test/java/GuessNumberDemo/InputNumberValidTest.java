@@ -37,28 +37,28 @@ class InputNumberValidTest {
     }
 
     @Test
-    void should_return_input_is_valid_when_checkInputNumbers_validNumbers() {
+    void should_return_false_when_checkInputNumbers_validNumbers() {
         //given
         InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {1,2,3,4};
 
         //when
-        boolean  res = isInputNumberValid.isInputNumbersValid(inputNumbers);
+        boolean res = isInputNumberValid.isInputLengthInvalid(inputNumbers);
 
         //given
-        assertEquals("input is valid" , res);
+        assertEquals(false , res);
     }
 
     @Test
-    void should_return_input_is_repeat_when_checkNumbersRepeat_given_repeatNumbers() {
+    void should_return_true_when_checkNumbersRepeat_given_repeatNumbers() {
         //given
         InputNumberValid inputNumberValid = new InputNumberValid();
         int []inputNumbers = {1,2,2,3};
 
         //when
-        boolean res = inputNumberValid.isInputNumbersValid(inputNumbers);
+        boolean res = inputNumberValid.isNumbersRepeat(inputNumbers);
 
         //then
-        assertEquals("input is repeat" , res);
+        assertEquals(true , res);
     }
 }

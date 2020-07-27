@@ -23,9 +23,8 @@ public class InputNumberValid {
             setWrongMes("inputNumberLength is invalid");
             return false;
         }
-
-        String inputNumber_is_repeat = checkNumbersRepeat(inputNumbers);
-        if ("input is repeat".equals(inputNumber_is_repeat)) {
+        if (isNumbersRepeat(inputNumbers)) {
+            setWrongMes("inputNumber is repeat");
             return false;
         }
 
@@ -44,14 +43,14 @@ public class InputNumberValid {
         return false;
     }
 
-    private String checkNumbersRepeat(int[] inputNumbers) {
+    protected boolean isNumbersRepeat(int[] inputNumbers) {
         int inputSize = inputNumbers.length;
         HashSet<Integer> Hset = new HashSet<Integer>();
         for (int num : inputNumbers) {
             Hset.add(num);
         }
-        if (inputSize != Hset.size()) return "input is repeat";
-        return null;
+        if (inputSize != Hset.size()) return true;
+        return false;
     }
 
 
