@@ -89,4 +89,18 @@ class InputNumberValidTest {
         assertEquals("inputNumberLength is invalid" , inputNumberValid.getWrongMes());
 
     }
+
+    @Test
+    void should_return_inputNumber_is_repeat_when_isInputNumbersValid_given_repeatNumber(){
+        //given
+        InputNumberValid inputNumberValid = new InputNumberValid();
+        int []inputNumbers = {1,2,2,3};
+
+        //when
+        inputNumberValid.isInputNumbersValid(inputNumbers);
+
+        //given
+        assertEquals("inputNumber is repeat" , inputNumberValid.getWrongMes());
+
+    }
 }
