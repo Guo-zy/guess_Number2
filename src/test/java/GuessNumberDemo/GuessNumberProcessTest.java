@@ -11,7 +11,7 @@ class GuessNumberProcessTest {
         GuessNumberProcess guessNumberProcess = new GuessNumberProcess();
 
         //when
-        guessNumberProcess.getGameResult("4A0B" , 1);
+        guessNumberProcess.getGameResult("4A0B");
 
         //then
         assertEquals("win" , guessNumberProcess.getResultMessage());
@@ -23,7 +23,7 @@ class GuessNumberProcessTest {
         GuessNumberProcess guessNumberProcess = new GuessNumberProcess();
 
         //when
-        guessNumberProcess.getGameResult("1A0B" , 1);
+        guessNumberProcess.getGameResult("1A0B");
 
         //then
         assertEquals("wrongAnswer" , guessNumberProcess.getResultMessage());
@@ -34,10 +34,9 @@ class GuessNumberProcessTest {
     void should_return_noChanceAnswer_when_getGameResult_given_answer_more_than_5() {
         //given
         GuessNumberProcess guessNumberProcess = new GuessNumberProcess();
-        int answerTime = 6;
 
         //when
-        guessNumberProcess.getGameResult("4A0B" , answerTime);
+        guessNumberProcess.getGameResult("4A0B");
 
         //then
         assertEquals("no chance answer" , guessNumberProcess.getResultMessage());

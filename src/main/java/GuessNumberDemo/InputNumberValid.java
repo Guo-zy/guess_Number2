@@ -27,6 +27,10 @@ public class InputNumberValid {
             setWrongMes("inputNumber is repeat");
             return false;
         }
+        if (isNumbersOutOfRange(inputNumbers)) {
+            setWrongMes("number is out of range");
+            return false;
+        }
 
         return true;
     }
@@ -50,6 +54,13 @@ public class InputNumberValid {
             Hset.add(num);
         }
         if (inputSize != Hset.size()) return true;
+        return false;
+    }
+
+    protected  boolean isNumbersOutOfRange(int[] inputNumbers){
+        for(int num : inputNumbers){
+            if(num < 0 || num >= 10) return true;
+        }
         return false;
     }
 

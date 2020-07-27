@@ -38,5 +38,7 @@ public class GuessNumber {
         return A;
     }
 
-
+    public int[] getAnswer() {
+        return answer;
+    }
 }

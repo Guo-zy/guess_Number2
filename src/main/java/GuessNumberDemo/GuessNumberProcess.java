@@ -2,20 +2,22 @@ package GuessNumberDemo;
 
 public class GuessNumberProcess {
 
+    private static  int answerTime = 1;
     private String resultMessage;
 
-    public boolean getGameResult(String guessNumber , int answerTime) {
-        if (isAnswerMoreThan5Times(answerTime)){
+    public boolean getGameResult(String guessNumber) {
+        if (isAnswerMoreThan6Times()){
             return false;
         }
         if(isResultCorrect(guessNumber)){
             return true;
         }
+        answerTime ++;
         return false;
     }
 
-    private boolean isAnswerMoreThan5Times(int answerTime) {
-        if (answerTime >= 6) {
+    private boolean isAnswerMoreThan6Times() {
+        if (answerTime > 6) {
             setResultMessage("no chance answer");
             return true;
         }
@@ -27,7 +29,7 @@ public class GuessNumberProcess {
             setResultMessage("win");
             return true;
         }
-        setResultMessage("wrongAnswer");
+        setResultMessage("wrongAnswer , Prompt : " + guessNumber);
         return false;
     }
 
@@ -39,4 +41,7 @@ public class GuessNumberProcess {
         this.resultMessage = resultMessage;
     }
 
+    public static int getAnswerTime() {
+        return answerTime;
+    }
 }
