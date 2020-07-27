@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class InputNumberValidTest {
 
     @Test
-    void should_return_true_when_checkInputNull_given_null_number() {
+    void should_return_true_when_isInputNull_given_null_number() {
         //given
         InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {};
@@ -24,7 +24,7 @@ class InputNumberValidTest {
 
 
     @Test
-    void should_return_true_when_checkInputLength_given_invalidLengthNumbers() {
+    void should_return_true_when_isInputLengthInvalid_given_invalidLengthNumbers() {
         //given
         InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {1,2,3};
@@ -37,7 +37,7 @@ class InputNumberValidTest {
     }
 
     @Test
-    void should_return_false_when_checkInputNumbers_validNumbers() {
+    void should_return_false_when_isInputLengthInvalid_validNumbers() {
         //given
         InputNumberValid isInputNumberValid = new InputNumberValid();
         int []inputNumbers = {1,2,3,4};
@@ -50,7 +50,7 @@ class InputNumberValidTest {
     }
 
     @Test
-    void should_return_true_when_checkNumbersRepeat_given_repeatNumbers() {
+    void should_return_true_when_isNumbersRepeat_given_repeatNumbers() {
         //given
         InputNumberValid inputNumberValid = new InputNumberValid();
         int []inputNumbers = {1,2,2,3};
@@ -60,5 +60,19 @@ class InputNumberValidTest {
 
         //then
         assertEquals(true , res);
+    }
+
+    @Test
+    void should_return_input_is_null_when_isInputNumbersValid_given_null_number(){
+        //given
+        InputNumberValid inputNumberValid = new InputNumberValid();
+        int []inputNumbers = {};
+
+        //when
+        boolean res = inputNumberValid.isInputNumbersValid(inputNumbers);
+
+        //given
+        assertEquals("input is null" , inputNumberValid.getWrongMes());
+
     }
 }
