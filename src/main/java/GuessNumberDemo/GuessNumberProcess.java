@@ -49,4 +49,8 @@ public class GuessNumberProcess {
     public static int getAnswerTime() {
         return answerTime;
     }
+
+    public static void setAnswerTime(int answerTime) {
+        GuessNumberProcess.answerTime = answerTime;
+    }
 }
