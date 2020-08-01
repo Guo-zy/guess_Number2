@@ -2,7 +2,7 @@ package GuessNumberDemo;
 
 public class GuessNumberProcess {
 
-    private static  int answerTime = 1;
+    private static  int answerTime = 0;
     private String resultMessage;
     private final String noChanceAnswer = "no chance answer";
     private final String correctResult = "4A0B";
@@ -11,13 +11,13 @@ public class GuessNumberProcess {
     private final int maxAnswerTimes = 6;
 
     public boolean getGameResult(String guessNumber) {
+        answerTime ++;
         if (isAnswerMoreThan6Times()){
             return false;
         }
          if(isResultCorrect(guessNumber)){
             return true;
         }
-        answerTime ++;
         return false;
     }
 
