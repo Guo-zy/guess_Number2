@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class GameStart {
 
-    private static GuessNumber guessNumber = new GuessNumber(new AnswerGenerateImpl());
-    private static GuessNumberProcess guessNumberProcess = new GuessNumberProcess();
-    private static InputNumberValid inputNumberValid = new InputNumberValid();
+    private static final GuessNumber guessNumber = new GuessNumber(new AnswerGenerateImpl());
+    private static final GuessNumberProcess guessNumberProcess = new GuessNumberProcess();
+    private static final InputNumberValid inputNumberValid = new InputNumberValid();
 
     public GameStart() {
         play();
