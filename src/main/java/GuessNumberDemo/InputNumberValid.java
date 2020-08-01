@@ -5,6 +5,13 @@ import java.util.HashSet;
 public class InputNumberValid {
 
     private String wrongMes;
+    private final String inputIsNull = "input is null";
+    private final String inputNumberLengthIsInvalid = "inputNumberLength is invalid";
+    private final String inputNumberIsRepeat = "inputNumber is repeat";
+    private final String numberIsOutOfRange = "number is out of range";
+    private final int leftRange = 0;
+    private final int rightRange = 10;
+    private final int validLength = 4;
 
     public void setWrongMes(String wrongMes) {
         this.wrongMes = wrongMes;
@@ -16,19 +23,19 @@ public class InputNumberValid {
 
     public boolean isInputNumbersValid(int[] inputNumbers) {
         if (isInputNull(inputNumbers)) {
-            setWrongMes("input is null");
+            setWrongMes(inputIsNull);
             return false;
         }
         if (isInputLengthInvalid(inputNumbers)) {
-            setWrongMes("inputNumberLength is invalid");
+            setWrongMes(inputNumberLengthIsInvalid);
             return false;
         }
         if (isNumbersRepeat(inputNumbers)) {
-            setWrongMes("inputNumber is repeat");
+            setWrongMes(inputNumberIsRepeat);
             return false;
         }
         if (isNumbersOutOfRange(inputNumbers)) {
-            setWrongMes("number is out of range");
+            setWrongMes(numberIsOutOfRange);
             return false;
         }
 
@@ -36,15 +43,11 @@ public class InputNumberValid {
     }
 
     protected boolean isInputNull(int[] inputNumbers) {
-
-        if (inputNumbers == null || inputNumbers.length == 0) return true;
-        return false;
+        return inputNumbers == null || inputNumbers.length == 0;
     }
 
     protected boolean isInputLengthInvalid(int[] inputNumbers) {
-
-        if (inputNumbers.length != 4) return true;
-        return false;
+        return inputNumbers.length != validLength;
     }
 
     protected boolean isNumbersRepeat(int[] inputNumbers) {
@@ -53,13 +56,12 @@ public class InputNumberValid {
         for (int num : inputNumbers) {
             Hset.add(num);
         }
-        if (inputSize != Hset.size()) return true;
-        return false;
+        return inputSize != Hset.size();
     }
 
-    protected  boolean isNumbersOutOfRange(int[] inputNumbers){
-        for(int num : inputNumbers){
-            if(num < 0 || num >= 10) return true;
+    protected boolean isNumbersOutOfRange(int[] inputNumbers) {
+        for (int num : inputNumbers) {
+            if (num < leftRange || num >= rightRange) return true;
         }
         return false;
     }
