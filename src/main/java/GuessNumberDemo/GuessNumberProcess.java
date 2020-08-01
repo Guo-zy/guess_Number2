@@ -4,6 +4,11 @@ public class GuessNumberProcess {
 
     private static  int answerTime = 1;
     private String resultMessage;
+    private final String noChanceAnswer = "no chance answer";
+    private final String correctResult = "4A08";
+    private final String prompt = "wrongAnswer , Prompt : ";
+    private final String gameWin = "win";
+    private final int maxAnswerTimes = 6;
 
     public boolean getGameResult(String guessNumber) {
         if (isAnswerMoreThan6Times()){
@@ -17,19 +22,19 @@ public class GuessNumberProcess {
     }
 
     private boolean isAnswerMoreThan6Times() {
-        if (answerTime > 6) {
-            setResultMessage("no chance answer");
+        if (answerTime > maxAnswerTimes) {
+            setResultMessage(noChanceAnswer);
             return true;
         }
         return false;
     }
 
     private boolean isResultCorrect(String guessNumber) {
-        if(guessNumber.equals("4A0B")){
-            setResultMessage("win");
+        if(guessNumber.equals(correctResult)){
+            setResultMessage(gameWin);
             return true;
         }
-        setResultMessage("wrongAnswer , Prompt : " + guessNumber);
+        setResultMessage(prompt + guessNumber);
         return false;
     }
 
