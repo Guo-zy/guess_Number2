@@ -5,7 +5,7 @@ public class GuessNumberProcess {
     private static  int answerTime = 1;
     private String resultMessage;
     private final String noChanceAnswer = "no chance answer";
-    private final String correctResult = "4A08";
+    private final String correctResult = "4A0B";
     private final String prompt = "wrongAnswer , Prompt : ";
     private final String gameWin = "win";
     private final int maxAnswerTimes = 6;

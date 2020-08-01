@@ -26,7 +26,7 @@ class GuessNumberProcessTest {
         guessNumberProcess.getGameResult("1A0B");
 
         //then
-        assertEquals("wrongAnswer" , guessNumberProcess.getResultMessage());
+        assertEquals("wrongAnswer , Prompt : " + "1A0B" , guessNumberProcess.getResultMessage());
 
     }
 
