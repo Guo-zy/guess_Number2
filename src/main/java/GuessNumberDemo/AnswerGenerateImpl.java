@@ -15,7 +15,7 @@ public class AnswerGenerateImpl implements AnswerGenerate {
 
 
     private int[] getRandom4Numbers() {
-        int[] ansnwer = new int[4];
+        int[] answer = new int[4];
         boolean[] isUse = new boolean[10];
         Random random = new Random();
         int randomNum;
@@ -23,10 +23,10 @@ public class AnswerGenerateImpl implements AnswerGenerate {
             do {
                 randomNum = random.nextInt(10);
             } while (isUse[randomNum]);
-            ansnwer[index] = randomNum;
+            answer[index] = randomNum;
             isUse[randomNum] = true;
         }
-        return ansnwer;
+        return answer;
     }
 
     protected boolean isAnswerRepeat(int[] answer) {
@@ -35,13 +35,11 @@ public class AnswerGenerateImpl implements AnswerGenerate {
         for (int num : answer) {
             Hset.add(num);
         }
-        if (inputSize != Hset.size()) return true;
-        return false;
+        return inputSize != Hset.size();
     }
 
     protected boolean isAnswerLengthInvalid(int[] answer) {
-        if (answer.length != 4) return true;
-        return false;
+        return answer.length != 4;
     }
 
     protected  boolean isAnswerOutOfRange(int [] answer){
