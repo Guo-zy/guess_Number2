@@ -18,7 +18,7 @@ class AnswerGenerateImplTest {
         boolean isRepeat = answerGenerate.isAnswerRepeat(answer);
 
         //then
-        assertEquals(true , isRepeat);
+        assertTrue(isRepeat);
 
     }
     @Test
@@ -31,8 +31,21 @@ class AnswerGenerateImplTest {
         boolean isRepeat = answerGenerate.isAnswerLengthInvalid(answer);
 
         //then
-        assertEquals(true , isRepeat);
+        assertTrue(isRepeat);
 
+    }
+
+    @Test
+    void should_return_true_when_answer_is_out_of_range_given_out_of_range_answer(){
+        //given
+        AnswerGenerateImpl answerGenerate = new AnswerGenerateImpl();
+        int [] answer = {1,2,3,-1};
+
+        //when
+        boolean isOutOfRange = answerGenerate.isAnswerOutOfRange(answer);
+
+        //then
+        assertTrue(isOutOfRange);
     }
 
 

@@ -43,4 +43,11 @@ public class AnswerGenerateImpl implements AnswerGenerate {
         if (answer.length != 4) return true;
         return false;
     }
+
+    protected  boolean isAnswerOutOfRange(int [] answer){
+        for (int num : answer){
+            if (num > 9 || num < 0) return true;
+        }
+        return false;
+    }
 }

@@ -10,6 +10,10 @@ public class GameStart {
     private static InputNumberValid inputNumberValid = new InputNumberValid();
 
     public GameStart() {
+        play();
+    }
+
+    private void play() {
         int []answer  = guessNumber.getAnswer();
         for (int i = 1; ; i++) {
             System.out.print(i + " time answer : ");
@@ -32,11 +36,13 @@ public class GameStart {
         }
     }
 
+
+
     public static void main(String[] args) {
         GameStart gameStart = new GameStart();
     }
 
-    private static int[] getInputNumber() {
+    private  int[] getInputNumber() {
         int[] inputNumber = new int[4];
         Scanner scanner = new Scanner(System.in);
         for (int index = 0; index < 4; index++) {
