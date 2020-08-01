@@ -31,12 +31,15 @@ class GuessNumberProcessTest {
     }
 
     @Test
-    void should_return_noChanceAnswer_when_getGameResult_given_answer_more_than_5() {
+    void should_return_noChanceAnswer_when_getGameResult_given_answer_more_than_6() {
         //given
         GuessNumberProcess guessNumberProcess = new GuessNumberProcess();
 
         //when
-        guessNumberProcess.getGameResult("4A0B");
+        for(int i = 1; i <= 7; i ++){
+            guessNumberProcess.getGameResult("1A1B");
+        }
+
 
         //then
         assertEquals("no chance answer" , guessNumberProcess.getResultMessage());

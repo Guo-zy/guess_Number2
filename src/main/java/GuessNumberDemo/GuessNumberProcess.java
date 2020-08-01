@@ -14,7 +14,7 @@ public class GuessNumberProcess {
         if (isAnswerMoreThan6Times()){
             return false;
         }
-        if(isResultCorrect(guessNumber)){
+         if(isResultCorrect(guessNumber)){
             return true;
         }
         answerTime ++;
