@@ -10,6 +10,7 @@ public class AnswerGenerateImpl implements AnswerGenerate {
         int[] answer = getRandom4Numbers();
         if (isAnswerLengthInvalid(answer)) return null;
         if (isAnswerRepeat(answer)) return null;
+        if (isAnswerOutOfRange(answer)) return null;
         return answer;
     }
 
